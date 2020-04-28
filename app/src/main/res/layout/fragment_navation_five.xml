@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.minlukj.wanandroid.brideg.state.NavigationViewModel" />
+        <variable
+            name="click"
+            type="com.minlukj.wanandroid.ui.navigation.NavigationFiveFragment.ClickProxy" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/text_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.minlukj.wanandroid.widget.AxButton
+            android:onClick="@{() -> click.startOneFragment()}"
+            android:id="@+id/btn_one"
+            android:layout_marginTop="20dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:border_color="@color/widget_border_view_color"
+            android:background="@color/widget_button_view_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:corner_radius="14dp"
+            android:text="@{vm.buttonName}" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="colorPrimary">#6200EE</color>
+  <color name="colorPrimaryDark">#3700B3</color>
+  <color name="colorAccent">#03DAC5</color>
+
+  <!--  Text Color -->
+  <color name="text_title">#333333</color>
+  <color name="text_content">#666666</color>
+  
+  <!--  Button Color -->
+  <color name="btn_dialog_bg">#FF0000</color>
+  <color name="btn_dialog_content">#FFFFFF</color>
+
+  <!--  Widget Button View -->
+  <color name="widget_button_view_bg">#FF0000</color>
+  <color name="widget_border_view_color">#000000</color>
+
+  <!--TabLayout-->
+  <color name="tab_bg">#FFFFFF</color>
+  <color name="tab_indicator_color">#000000</color>
+</resources>
