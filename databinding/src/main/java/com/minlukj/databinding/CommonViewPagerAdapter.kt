@@ -1,4 +1,4 @@
-package com.minlukj.wanandroid
+package com.minlukj.databinding
 
 import android.view.View
 import android.view.ViewGroup
@@ -9,7 +9,7 @@ import androidx.viewpager.widget.PagerAdapter
  * @ProjectName:    WanAndroid
  * @Package:        com.minlukj.wanandroid
  * @ClassName:      CommonViewPagerAdapter
- * @Description:     kotlin类作用描述
+ * @Description:    TabLayout + ViewPager Adapter
  * @Author:         忞鹿
  * @CreateDate:     2020/4/27 11:18
  */

@@ -1,6 +1,6 @@
-if (singleModule.toBoolean()){
+if (singleModule.toBoolean()) {
     apply plugin: 'com.android.application'
-}else {
+} else {
     apply plugin: 'com.android.library'
 }
 
@@ -9,8 +9,8 @@ apply from: '../config.gradle'
 android {
     defaultConfig {
         //只有独立运行才需要applicationId
-        if (singleModule.toBoolean()){
-            applicationId "com.minlukj.wanandroid.databinding"
+        if (singleModule.toBoolean()) {
+            applicationId "com.minlukj.databinding"
         }
         minSdkVersion min_sdk_verion
         targetSdkVersion target_sdk_version
@@ -19,4 +19,8 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+}
+
+dependencies {
+
 }

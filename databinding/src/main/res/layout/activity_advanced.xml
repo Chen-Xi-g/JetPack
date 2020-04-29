@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="vm"
+            type="com.minlukj.databinding.viewmodel.AdvancedViewModel" />
+        <variable
+            name="shopEntity"
+            type="com.minlukj.databinding.entity.ShopEntity" />
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.AdvancedActivity">
+        <Button
+            android:id="@+id/top_btn_reset"
+            android:text="@string/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <!--initTabAndTab在TabBindingAdapter中查看详情，这里的作用为是否初始化-->
+        <com.google.android.material.tabs.TabLayout
+            initTabAndTab="@{vm.initTabAndPage}"
+            android:id="@+id/tl"
+            app:tabIndicatorColor="@color/color_ff0000"
+            app:tabTextColor="@color/color_ff0000"
+            app:tabSelectedTextColor="@color/color_00ff00"
+            app:tabIndicatorHeight="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <com.google.android.material.tabs.TabItem
+                android:text="@string/shop"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <com.google.android.material.tabs.TabItem
+                android:text="@string/car"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </com.google.android.material.tabs.TabLayout>
+        <androidx.viewpager.widget.ViewPager
+            android:overScrollMode="never"
+            android:id="@+id/vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_margin="10dp"
+                    android:text='@{@string/car_brand + vm.carEntity.brand}'
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_margin="10dp"
+                    android:text='@{@string/car_wheel + vm.carEntity.wheel}'
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_margin="10dp"
+                    android:text='@{@string/car_engine + vm.carEntity.engine}'
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_margin="10dp"
+                    android:text='@{@string/car_price + vm.carEntity.price}'
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_margin="10dp"
+                    android:text='@{@string/car_is_limit + (vm.carEntity.limit ? `限定` : `非限定`)}'
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <!--text中不要包含字符，此处为了方便学习未添加到strings-->
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_margin="10dp"
+                    android:text="@{`地址：` + shopEntity.address}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_margin="10dp"
+                    android:text="@{`店铺名称：` + shopEntity.name}"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:layout_margin="10dp"
+                    android:text="@={shopEntity.name}"
+                    android:hint="@string/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:inputType="text"
+                    android:importantForAutofill="no"
+                    tools:text="注意！ 这里双向绑定为@={} 并非之前使用的@{}"/>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_reset"
+                    android:text="@string/reset"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+        </androidx.viewpager.widget.ViewPager>
+    </LinearLayout>
+</layout>

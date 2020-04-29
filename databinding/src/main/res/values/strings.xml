@@ -1,4 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">DataBinding</string>
+    <string name="basis">基础</string>
+    <string name="medium">中级</string>
+    <string name="advanced">高级</string>
+    <string name="car_brand">汽车品牌：</string>
+    <string name="car_wheel">汽车轮胎：</string>
+    <string name="car_engine">汽车发动机：</string>
+    <string name="car_price">汽车价格：</string>
+    <string name="car_is_limit">汽车是否限定：</string>
+    <string name="name">双向绑定</string>
+    <string name="reset">重置</string>
+    <string name="shop">店铺</string>
+    <string name="car">汽车</string>
 </resources>

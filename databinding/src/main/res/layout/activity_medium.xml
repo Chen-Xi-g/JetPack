@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="entity"
+            type="com.minlukj.databinding.entity.ShopEntity" />
+    </data>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".activity.MediumActivity">
+        <!--text中不要包含字符，此处为了方便学习未添加到strings-->
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_margin="10dp"
+            android:text="@{`地址：` + entity.address}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_margin="10dp"
+            android:text="@{`店铺名称：` + entity.name}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_margin="10dp"
+            android:text="@={entity.name}"
+            android:hint="@string/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:importantForAutofill="no"
+            tools:text="注意！ 这里双向绑定为@={} 并非之前使用的@{}"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_reset"
+            android:text="@string/reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</layout>

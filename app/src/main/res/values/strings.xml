@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">WanAndroid</string>
-    <string name="show_dialog">显示Dilaog</string>
+    <string name="show_dialog">显示Dialog</string>
     <string name="title">当前主题Title</string>
     <string name="content">当前主题Content</string>
     <string name="cancel">取消</string>
@@ -28,4 +29,5 @@
     <string name="start_fragment_3">跳转 Navigation Fragment 三</string>
     <string name="start_fragment_4">跳转 Navigation Fragment 四</string>
     <string name="btn_navigation">Navigation测试</string>
+    <string name="btn_data_binding">DataBinding测试</string>
 </resources>

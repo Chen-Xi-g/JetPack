@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="click"
+            type="com.minlukj.databinding.DataBindingActivity.ClickProxy" />
+    </data>
+
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".DataBindingActivity">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:onClick="@{() ->click.startBasisActivity()}"
+            android:padding="10dp"
+            android:layout_margin="20dp"
+            android:text="@string/basis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:onClick="@{() ->click.startMediumActivity()}"
+            android:padding="10dp"
+            android:layout_margin="20dp"
+            android:text="@string/medium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:onClick="@{()->click.startAdvancedActivity()}"
+            android:padding="10dp"
+            android:layout_margin="20dp"
+            android:text="@string/advanced"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</layout>
