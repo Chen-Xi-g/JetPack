@@ -20,6 +20,7 @@ class MediumActivity : AppCompatActivity() {
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_medium)
         val shopEntity = ShopEntity("北路店铺","北路")
         mBinding.entity = shopEntity
+        //修改实体类数据后刷新UI视图
         mBinding.btnReset.setOnClickListener {
             shopEntity.name = "重置之后的北路店铺"
             shopEntity.address = "重置之后的北路"

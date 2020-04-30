@@ -18,6 +18,7 @@ class DataBindingActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        //DataBinding初始化
         mDataBinding = DataBindingUtil.setContentView(this,R.layout.activity_data_binding)
         mDataBinding.click = ClickProxy()
     }

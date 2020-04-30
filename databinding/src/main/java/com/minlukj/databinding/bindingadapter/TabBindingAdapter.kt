@@ -17,6 +17,9 @@ import com.minlukj.databinding.R
  */
 object TabBindingAdapter {
 
+    /**
+     * BindingAdapter 绑定TabLayout和ViewPager
+     */
     @JvmStatic
     @BindingAdapter(value = ["initTabAndTab"], requireAll = false)
     fun initTabAndPage(tabLayout : TabLayout, initTabAndPage : Boolean){

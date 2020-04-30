@@ -37,12 +37,14 @@ class AdvancedActivity : AppCompatActivity() {
         mBinding.vm = mVm
         mBinding.shopEntity = mShopEntity
 
+        //修改ViewModel中数据
         mBinding.topBtnReset.setOnClickListener {
             //如果需要修改实体类值参照ShopEntity
             val mCarEntity2 = CarEntity("兰博基尼","PZero",true,System.currentTimeMillis(),"八十八缸发动机")
             mVm.carEntity.set(mCarEntity2)
         }
 
+        //双向绑定
         mBinding.btnReset.setOnClickListener {
             mShopEntity.name = "重置之后的北路店铺${System.currentTimeMillis()}"
             mShopEntity.address = "重置之后的北路${System.currentTimeMillis()}"

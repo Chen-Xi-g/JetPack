@@ -19,6 +19,7 @@ class ShopEntity() : BaseObservable() {
         this.address = address
     }
 
+    //双向绑定需要声明@Bindable，会自动生成 BR.xXX ，在set时刷新
     @Bindable
     var name  = ""
         set(value) {

@@ -15,6 +15,8 @@ import com.minlukj.databinding.entity.CarEntity
  * @CreateDate:     2020/4/29 13:49
  */
 class AdvancedViewModel : ViewModel() {
+    //实体类使用 ObservableField<T>
     val carEntity = ObservableField<CarEntity>()
+    //基本数据类型使用 ObservableInt、ObservableLong.... String属于ObservableField<T>
     val initTabAndPage = ObservableBoolean(true)
 }
