@@ -1,5 +1,6 @@
-package com.minlukj.lifecycles
+package com.minlukj.lifecycles.ui
 
+import com.minlukj.lifecycles.R
 import com.minlukj.lifecycles.base.BaseFragment
 
 /**

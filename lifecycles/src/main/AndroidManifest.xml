@@ -6,7 +6,7 @@
 
     <application>
         <activity android:name=".ui.FragmentActivity"/>
-        <activity android:name=".MainActivity">
+        <activity android:name=".ui.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

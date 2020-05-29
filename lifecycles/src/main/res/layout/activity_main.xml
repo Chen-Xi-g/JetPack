@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
     <androidx.appcompat.widget.AppCompatButton
         android:text="@string/start_fragment"
         android:id="@+id/ac_btn_start_fragment"

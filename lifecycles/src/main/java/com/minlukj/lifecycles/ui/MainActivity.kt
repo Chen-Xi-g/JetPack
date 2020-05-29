@@ -1,8 +1,8 @@
-package com.minlukj.lifecycles
+package com.minlukj.lifecycles.ui
 
 import android.content.Intent
+import com.minlukj.lifecycles.R
 import com.minlukj.lifecycles.base.BaseActivity
-import com.minlukj.lifecycles.ui.FragmentActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : BaseActivity() {
