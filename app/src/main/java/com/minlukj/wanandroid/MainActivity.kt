@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.minlukj.databinding.DataBindingActivity
 import com.minlukj.wanandroid.ui.activity.NavigationActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -21,7 +20,7 @@ class MainActivity : AppCompatActivity() {
         .setTitle(getString(R.string.dialog_title))
         .setMessage(getString(R.string.dialog_msg))
         .setNegativeButton(getString(R.string.btn_data_binding)){ _, _ ->
-          startActivity(Intent(this,DataBindingActivity::class.java))
+//          startActivity(Intent(this,DataBindingActivity::class.java))
         }
         .setPositiveButton(getString(R.string.btn_navigation)) { _, _ ->
           startActivity(Intent(this,NavigationActivity::class.java))

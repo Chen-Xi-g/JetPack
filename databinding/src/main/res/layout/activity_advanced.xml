@@ -95,7 +95,7 @@
                     android:layout_height="wrap_content"/>
                 <androidx.appcompat.widget.AppCompatEditText
                     android:layout_margin="10dp"
-                    android:text="@={shopEntity.name}"
+                    android:text="@{shopEntity.name}"
                     android:hint="@string/name"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

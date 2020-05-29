@@ -1,3 +1,4 @@
 rootProject.name='WanAndroid'
 include ':app'
 include ':databinding'
+include ':lifecycles'
