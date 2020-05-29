@@ -29,7 +29,7 @@ class AdvancedActivity : AppCompatActivity() {
         mVm = ViewModelProvider(this,defaultViewModelProviderFactory).get(AdvancedViewModel::class.java)
 
         mShopEntity = ShopEntity("这是店铺的名字","这是店铺的地址")
-        mCarEntity = CarEntity("宝马","防滑",true,100000,"八缸发动机")
+        mCarEntity = CarEntity("宝马","防滑",true,100000,"十二缸发动机")
 
         mVm.carEntity.set(mCarEntity)
 
@@ -40,7 +40,7 @@ class AdvancedActivity : AppCompatActivity() {
         //修改ViewModel中数据
         mBinding.topBtnReset.setOnClickListener {
             //如果需要修改实体类值参照ShopEntity
-            val mCarEntity2 = CarEntity("兰博基尼","PZero",true,System.currentTimeMillis(),"八十八缸发动机")
+            val mCarEntity2 = CarEntity("兰博基尼","PZero",true,System.currentTimeMillis(),"一百二十缸发动机")
             mVm.carEntity.set(mCarEntity2)
         }
 

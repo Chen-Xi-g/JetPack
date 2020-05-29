@@ -19,7 +19,7 @@ class BasisActivity : AppCompatActivity() {
         //初始化
         mBinding = DataBindingUtil.setContentView(this,R.layout.activity_basis)
         //单向绑定
-        val carEntity = CarEntity("宝马","防滑",true,100000,"八缸发动机")
+        val carEntity = CarEntity("宝马","防滑",true,100000,"十二缸发动机")
         mBinding.entity = carEntity
     }
 }
